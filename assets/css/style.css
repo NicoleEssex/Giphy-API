@@ -9,3 +9,9 @@
 .jumbotron {
     margin-top: 25px;
 }
+
+
+#giphy-display img[data-state='animated']{
+    padding:50px;
+    transition: all 3s ease-in-out;
+}
