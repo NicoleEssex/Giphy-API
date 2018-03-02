@@ -1,5 +1,14 @@
+body {
+    background-image: url(../images/abstract.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .page-header {
     text-align: center;
+    background-color: #d7f8de;
+    margin-top: 0px;
+    
 }
 
 .input-group {
@@ -8,10 +17,22 @@
 
 .jumbotron {
     margin-top: 25px;
+    background-color: #30723f;
+    padding: 10px;
+     
 }
 
-
+#giphy-display {
+    background-color: #30723f;
+}
+#giphy-display img[data-state='still']{
+    padding:50px;
+    background-color: #d7f8de;
+    /* transition: all 3s ease-in-out; */
+}
+    
 #giphy-display img[data-state='animated']{
     padding:50px;
-    transition: all 3s ease-in-out;
+    background-color: #1a3f22;  
 }
+    

@@ -74,10 +74,13 @@ function searchGiphy(value) {
             var reactionImg = $("<img>");
             // reactionImg.attr("src", results[i].images.fixed_height.url);
             reactionImg.attr({
-                "src": results[i].images.original_still.url,
+                // "src": results[i].images.original_still.url,
+                "src": results[i].images.fixed_width_still.url,
                 "data-state":"still",
-                "data-still":results[i].images.original_still.url,
-                "data-animated":results[i].images.fixed_height.url
+                // "data-still":results[i].images.original_still.url,
+                "data-still":results[i].images.fixed_width_still.url,
+                // "data-animated":results[i].images.fixed_height.url,
+                "data-animated":results[i].images.fixed_width.url,
             });
             reactionDiv.append(p);
             reactionDiv.append(reactionImg);
@@ -126,25 +129,25 @@ $(document).on("click", "img",  function(){
     var state = $(this).attr("data-state");
     var still = $(this).attr("data-still"); 
     var animated = $(this).attr("data-animated"); 
-
+// TODO
+        // Change to animated
+        // src
+        // state = animated
     if(state == "still"){
         $(this).attr({
             "src": animated,
             "data-state": "animated"
         });
-        // TODO
-        // Change to animated
+   // TODO
+        // change it to still
         // src
-        // state = animated
+        // state = still     
     } else{
         $(this).attr({
             "src": still,
             "data-state": "still"
         });
-        // TODO
-        // change it to still
-        // src
-        // state = still
+        
     }
     console.log(state);
 });
