@@ -2,13 +2,16 @@ body {
     background-image: url(../images/abstract.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    margin-top: 0px;
 }
 
 .page-header {
     text-align: center;
     background-color: #d7f8de;
     margin-top: 0px;
-    
+    padding-top: 10px;
+    border: #f98236; 
+    border-bottom-style: solid;   
 }
 
 .input-group {
