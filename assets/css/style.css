@@ -16,6 +16,7 @@ body {
 
 .input-group {
     margin-top: 25px;
+    width: 50%;
 }
 
 .jumbotron {
@@ -31,11 +32,13 @@ body {
 #giphy-display img[data-state='still']{
     padding:50px;
     background-color: #d7f8de;
-    /* transition: all 3s ease-in-out; */
-}
-    
+ 
+}    
 #giphy-display img[data-state='animated']{
     padding:50px;
-    background-color: #1a3f22;  
+    background-color: #1a3f22;
 }
-    
+
+#giphy-buttons {
+    padding-left:56px;
+}
