@@ -1,9 +1,7 @@
-console.log("hello Word");
-
-// Create array of gestures
+// Create array of gesture buttons
 var gestures = ["Thumbs-up", "Hang-Loose", "Whatever", "Rock-on", "Face-palm"];
 
-// Function for displaying gesture data
+// Function for creating and displaying gesture buttons
 function renderButtons() {
 
     // Delete the giphy buttons prior to adding new giphy buttons
@@ -12,17 +10,17 @@ function renderButtons() {
     // Delete giphy results before displaying next selection
     $("#giphy-display").empty();
     
-    // Looping through the array of gestures
+    // Looping through the array of gestures buttons
     for (var i = 0; i < gestures.length; i++) {
         console.log(gestures[i]);
 
-        // Dynamicaly generate buttons for each gesture in array.
+        // Create button element
         var button = $("<button>");
 
-        // Adding a class for bootstrap styling
+        // Adding a class to the button for bootstrap styling
         button.addClass("btn btn-success");
 
-        // Adding a data-attribute with a value of the gesture at index i
+        // Adding a data-attribute to the button with a value of the gesture at index i
         button.attr("data-reaction", gestures[i]);
 
         // Providing the button's text with a value of the gesture at index i
@@ -44,9 +42,11 @@ $("#giphy-buttons").on("click", "button", function () {
 
 
 
-
+// Search Giphy API for value from data-reaction attribute
 function searchGiphy(value) {
+    //Clear previous images from previous search
     $(".images").remove();
+
     // Var holding my key for Giphy API searches
     var APIKey = "eY02m6Nx4TL79ZmWJswlB4lnc3N68Xs2";
 
@@ -54,6 +54,7 @@ function searchGiphy(value) {
     var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         value + "&api_key=" + APIKey + "&limit=10";
     
+    //AJAX Get method to gather data from query
     $.ajax({
         url: queryURL,
         method: "GET"
@@ -62,16 +63,13 @@ function searchGiphy(value) {
         // Store results from response to variable    
         var results = response.data;
 
-        console.log("Data: ", response.data);
-
         // Create for loop to create divs for each image from the results.
-
         for (var i = 0; i < results.length; i++) {
             var reactionDiv = $("<div class='images'>");
             var p = $("<p>");
             $("p").text("Rating: " + results[i].rating);
             var reactionImg = $("<img>");
-            // reactionImg.attr("src", results[i].images.fixed_height.url);
+            // Create object with properties for variable attributes
             reactionImg.attr({
                 "src": results[i].images.fixed_width_still.url,
                 "data-state":"still",
@@ -79,6 +77,7 @@ function searchGiphy(value) {
                 "data-animated": results[i].images.fixed_width.url,
             });
 
+            //Placement for Images and Image attributes within display area 
             reactionDiv.append(p);
             reactionDiv.append(reactionImg);
             $("#giphy-display").prepend(reactionDiv);
@@ -95,10 +94,6 @@ $("#go").on("click", function () {
     renderButtons();
     searchGiphy(search);
     $("#search").val("");
-    // TODO
-    console.log("Gestures: ", gestures);
-    console.log("Search: ", search);
-
 });    
 
 
@@ -114,6 +109,7 @@ $(document).on("click", "img",  function(){
             "src": animated,
             "data-state": "animated"
         });
+
     // Change to still    
     } else{
         $(this).attr({
@@ -122,5 +118,4 @@ $(document).on("click", "img",  function(){
         });
         
     }
-    console.log(state);
 });

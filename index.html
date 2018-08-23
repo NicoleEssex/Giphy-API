@@ -4,42 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap min -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Bootstrap theme min -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"> 
+    <!-- Custom CSS  -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Giphies</title>
 </head>
+
 <body>
-    <div class="page-header">
+    <header class="page-header">
         <h1>This is my Giphy project as a developer.</h1>
-        <h1><small>Click on a button below, then on the image to see the magic!</small></h1>
-        <h1><small>Search and enjoy your own favorite gestures as well.</small></h1>
-    </div>
-              
-    <div class="container-fluid" id="giphy-buttons">
-        <!-- <button type="button" class="btn btn-success">Thumbs-Up</button>
-        <button type="button" class="btn btn-success">Hang-Loose</button>
-        <button type="button" class="btn btn-success">Whatever</button>
-        <button type="button" class="btn btn-success">Rock-On</button>
-        <button type="button" class="btn btn-success">Face-Palm</button> -->
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class=".col-md-offset-6">
-                <div class="input-group">
-                    <input type="text" id ="search" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" id="go" type="button">Go!</button>
-                    </span>
+        <h2><small>Click on a button below, then on the image to see the magic!</small></h2>
+        <h2><small>Search and enjoy your own favorite gestures as well.</small></h2>
+    </header>
+    <main>
+        <div class="container-fluid" id="giphy-buttons">
+            <!-- div holding buttons generated dynamically -->
+        </div>
+            <div class="container">
+                <div class="row">
+                    <div class=".col-md-offset-6">
+                        <div class="input-group">
+                            <input type="text" id ="search" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                            <button class="btn btn-default" id="go" type="button">Go!</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>    
+            <div class="jumbotron">
+                <div id="giphy-display">
+                    <!-- div holding images that display from giphy search -->
                 </div>
             </div>
-        </div>
-    </div>    
-    <div class="jumbotron">
-        <div id="giphy-display">
-            <!-- <span><img src="https://media.giphy.com/media/imRu0Oqh6kzdK/giphy.gif" alt="Thumbs-Up"></span> -->
-        </div>
-    </div>
+    </main>             
 </body>
 
 <script type="text/javascript" src="assets/javascript/jquery-3.3.1.min copy.js"></script>
