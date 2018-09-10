@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     <!-- Bootstrap min -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- Bootstrap theme min -->
@@ -14,33 +15,47 @@
 </head>
 
 <body>
-    <header class="page-header">
-        <h1>This is my Giphy project as a developer.</h1>
-        <h2><small>Click on a button below, then on the image to see the magic!</small></h2>
-        <h2><small>Search and enjoy your own favorite gestures as well.</small></h2>
-    </header>
-    <main>
-        <div class="container-fluid" id="giphy-buttons">
-            <!-- div holding buttons generated dynamically -->
+    <section id="intro" class="container-fluid">
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <h1>GIPHTASTIC</h1>
+            </div>            
         </div>
-            <div class="container">
-                <div class="row">
-                    <div class=".col-md-offset-6">
-                        <div class="input-group">
-                            <input type="text" id ="search" class="form-control" placeholder="Search for...">
-                            <span class="input-group-btn">
-                            <button class="btn btn-default" id="go" type="button">Go!</button>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>    
-            <div class="jumbotron">
-                <div id="giphy-display">
-                    <!-- div holding images that display from giphy search -->
+        <div class="row text-center ">
+            <div class="col-xs-12">
+                    <h2>Click on a button below, then on the images to see the magic!
+                    </h2>
+            </div>
+        </div>
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <div id="header-giphy-div">
+                    <div style="width:100%;height:auto;padding-bottom:0%"><iframe src="https://giphy.com/embed/xUA7aPEybD1cLJl6cU" width="100%" height="auto" frameBorder="0" class="giphy-embed" id="header-giphy"></iframe></div>
                 </div>
             </div>
-    </main>             
+        </div>
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <h2>Create and Enjoy your own as well.</h2>
+            </div> 
+        </div>        
+    </section>
+    <section id="main" class="container-fluid">
+        <div class="row text-center" id="giphy-buttons">
+            <!-- div holding buttons generated dynamically -->
+        </div>
+        <div class="input-group">
+            <input type="text" id ="search"class="form-control" placeholder="Search for new giphy">
+            <span class="input-group-btn">
+            <button class="btn btn-default" id="go"type="button">Go!</button>
+            </span>
+        </div>
+        </div>    
+        <div id="giphy-display">
+            <!-- div holding images that display from giphysearch -->
+        </div>
+        </div>
+    </section>             
 </body>
 
 <script type="text/javascript" src="assets/javascript/jquery-3.3.1.min copy.js"></script>

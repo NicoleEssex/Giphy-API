@@ -1,44 +1,123 @@
 body {
-    background-image: url(../images/abstract.jpg);
-    background-repeat: no-repeat;
+    background-image: url(../images/PaintSquares_1920x1234.gif);
     background-size: 100%;
     margin-top: 0px;
+    max-width: 900px;
+    margin: 0 auto;   
 }
 
-header.page-header {
-    text-align: center;
-    background-color: #d7f8de;
-    margin-top: 0px;
-    padding-top: 10px;
-    border: #f98236; 
-    border-bottom-style: solid;   
+section#intro {
+    height: 100vh;
+    width: 100%;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
-.input-group {
-    margin-top: 25px;
-    width: 50%;
+h1 {
+    letter-spacing: .15em;
+    color: white;
+    text-shadow: 3px 2px black;
 }
 
-.jumbotron {
-    margin-top: 25px;
-    background-color: #30723f;
-    padding: 10px;
-     
+section#intro h2 {
+    z-index: 3;
+    padding: 15px;
+    word-spacing: 2px;
+    margin-left: 14%;
+    margin-right: 4%;
+    line-height: 1.5;
+    text-shadow: 1px 1px white;
+    margin-bottom: 0px;
 }
 
-#giphy-display {
-    background-color: #30723f;
-}
-#giphy-display img[data-state='still']{
-    padding:50px;
-    background-color: #d7f8de;
- 
-}    
-#giphy-display img[data-state='animated']{
-    padding:50px;
-    background-color: #1a3f22;
+div#header-giph-div {
+    display: border-box;
+    overflow: hidden;
+    max-width: 500px;
+    height: auto;
 }
 
 #giphy-buttons {
-    padding-left:56px;
+    margin: 0 auto;
 }
+
+button.btn.btn-default {
+    margin: 5px;
+    opacity: .8;
+}
+
+div#giphy-buttons.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* User search */
+.input-group {
+    margin: 25px auto;
+    width: 50%;
+}
+
+#search {
+    font-size: 1.5vh;
+}
+
+#go {
+    margin-top: 0px;
+}
+
+#giphy-display {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 25px;    
+}
+
+/* Individual divs holding each image */
+div.images {
+    display: flex;
+    align-content: center;
+}
+
+#giphy-display img[data-state='still']{
+    margin: 10px;
+    box-shadow: 2px 2px black;
+    border-radius: 5px; 
+}    
+
+#giphy-display img[data-state='animated']{
+    margin: 10px;
+    box-shadow: 2px 2px black;
+    border-radius: 5px;
+    
+}
+
+/* responsive fonts */
+@media (min-width: 320px) {
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+}
+@media (min-width: 768px) {
+    h1 {
+        font-size: 92px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+}
+@media (min-width:1024px){
+    h1 {
+        font-size: 120px;
+    }
+    h2 {
+        font-size: 35px;
+    }
+}
+
