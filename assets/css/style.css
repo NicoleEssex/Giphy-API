@@ -7,7 +7,7 @@ body {
 }
 
 section#intro {
-    height: 100vh;
+    height: 75vh;
     width: 100%;
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
@@ -19,21 +19,21 @@ h1 {
 }
 
 section#intro h2 {
-    z-index: 3;
     padding: 15px;
     word-spacing: 2px;
-    margin-left: 14%;
-    margin-right: 4%;
     line-height: 1.5;
     text-shadow: 1px 1px white;
     margin-bottom: 0px;
 }
 
-div#header-giph-div {
+#header-giphy-div {
     display: border-box;
     overflow: hidden;
-    max-width: 500px;
+    max-width: 300px;
     height: auto;
+    padding: 25px;
+    margin: 50px auto;
+    background-color: #a2cf55;
 }
 
 #giphy-buttons {
